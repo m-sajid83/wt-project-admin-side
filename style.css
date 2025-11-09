@@ -1,0 +1,109 @@
+/* -------------------- General -------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #f0f9ff;
+}
+
+/* -------------------- Wrapper -------------------- */
+.wrapper {
+    display: flex;
+    flex: 1;
+}
+
+/* -------------------- Sidebar -------------------- */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(180deg, #00b4d8, #0077b6);
+    color: #fff;
+    flex-shrink: 0;
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.sidebar h3 {
+    padding: 15px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 12px 20px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-left: 4px solid #ffd60a;
+}
+
+/* -------------------- Main Content -------------------- */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* -------------------- Cards -------------------- */
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    background-color: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* -------------------- Footer -------------------- */
+footer {
+    background: #023047;
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* -------------------- Tables -------------------- */
+.table th,
+.table td {
+    vertical-align: middle !important;
+}
+
+/* -------------------- Login Page -------------------- */
+.login-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 992px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+    .sidebar a {
+        display: inline-block;
+        padding: 10px 15px;
+    }
+}
